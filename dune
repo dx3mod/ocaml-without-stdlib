@@ -1,0 +1,16 @@
+(executable
+ (name main)
+ (flags
+  :standard
+  -nostdlib
+  -nopervasives
+  ; explicit runtime include (link)
+  -cclib
+  -lasmrun
+  -ccopt
+  "-L %{ocaml_where}"
+  -ccopt
+  "-lm -ldl")
+ (foreign_stubs
+  (language c)
+  (names stdlib)))

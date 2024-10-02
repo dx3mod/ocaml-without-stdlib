@@ -1,0 +1,1 @@
+external print_endline : string -> unit = "caml_print_endline" [@@noalloc]
